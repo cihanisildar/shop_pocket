@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
-import { type NextRequest } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { updateSession } from '@/lib/supabase/middleware';
 import { locales } from './i18n';
 
@@ -10,6 +10,19 @@ const intlMiddleware = createMiddleware({
 });
 
 export default async function middleware(request: NextRequest) {
+  // Handle Supabase auth callback redirect from /dashboard to /tr/auth/callback
+  const pathname = request.nextUrl.pathname
+  const code = request.nextUrl.searchParams.get('code')
+  
+  // If we're at /dashboard with a code parameter, redirect to the callback route
+  if (pathname === '/dashboard' && code) {
+    const defaultLocale = 'tr'
+    const url = request.nextUrl.clone()
+    url.pathname = `/${defaultLocale}/auth/callback`
+    // Preserve all query parameters
+    return NextResponse.redirect(url)
+  }
+
   // Let i18n middleware handle routing first
   const intlResponse = intlMiddleware(request);
 
