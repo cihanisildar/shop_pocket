@@ -226,6 +226,8 @@
     "create": "Create",
     "loading": "Loading...",
     "columnMappingsConfigured": "Column mappings configured",
+    "columnMappingsNotConfigured": "Excel column mappings not configured",
+    "clickSettingsToConfigure": "Click the settings button (⚙️) next to this catalog to configure Excel column mappings before uploading files.",
     "editCatalogTitle": "Edit catalog",
     "deleteCatalogTitle": "Delete catalog",
     "delete": "Delete",

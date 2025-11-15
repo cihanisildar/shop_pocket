@@ -227,6 +227,8 @@
     "create": "Oluştur",
     "loading": "Yükleniyor...",
     "columnMappingsConfigured": "Sütun eşlemeleri yapılandırıldı",
+    "columnMappingsNotConfigured": "Excel sütun eşlemeleri yapılandırılmamış",
+    "clickSettingsToConfigure": "Dosya yüklemeden önce Excel sütun eşlemelerini yapılandırmak için bu kataloğun yanındaki ayarlar düğmesine (⚙️) tıklayın.",
     "editCatalogTitle": "Katalogu düzenle",
     "deleteCatalogTitle": "Katalogu sil",
     "delete": "Sil",

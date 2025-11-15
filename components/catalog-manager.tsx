@@ -254,6 +254,31 @@ export default function CatalogManager() {
                     {catalog.description && (
                       <p className="text-sm text-gray-600 mt-1">{catalog.description}</p>
                     )}
+                    {(() => {
+                      const mappings = catalog.column_mappings
+                      const hasMappings = mappings?.mappings 
+                        ? mappings.mappings.some(m => m.field && m.column.trim())
+                        : (mappings?.code || mappings?.name || mappings?.unit || mappings?.category || mappings?.price || mappings?.description)
+                      
+                      if (!hasMappings) {
+                        return (
+                          <div className="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                            <div className="flex items-start gap-2">
+                              <span className="text-amber-600 text-lg">⚠️</span>
+                              <div className="flex-1">
+                                <p className="text-sm font-medium text-amber-900">
+                                  {t('columnMappingsNotConfigured')}
+                                </p>
+                                <p className="text-xs text-amber-700 mt-1">
+                                  {t('clickSettingsToConfigure')}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        )
+                      }
+                      return null
+                    })()}
                     <p className="text-xs text-gray-500 mt-1">
                       {t('created')} {new Date(catalog.created_at).toLocaleDateString()}
                       {(() => {
