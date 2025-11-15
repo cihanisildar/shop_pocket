@@ -38,7 +38,23 @@ export async function updateSession(request: NextRequest) {
   // Extract locale from pathname (e.g., /en/login -> /login)
   const pathname = request.nextUrl.pathname
   const pathnameWithoutLocale = pathname.replace(/^\/[a-z]{2}(\/|$)/, '/')
+  const locale = pathname.match(/^\/([a-z]{2})(\/|$)/)?.[1] || 'tr'
 
+  // If user is authenticated, redirect them away from homepage/login/signup to dashboard
+  if (user) {
+    if (
+      pathnameWithoutLocale === '/' ||
+      pathnameWithoutLocale.startsWith('/login') ||
+      pathnameWithoutLocale.startsWith('/signup')
+    ) {
+      const url = request.nextUrl.clone()
+      url.pathname = `/${locale}/dashboard`
+      url.search = '' // Clear query params
+      return NextResponse.redirect(url)
+    }
+  }
+
+  // If no user, redirect protected routes to login
   if (
     !user &&
     pathnameWithoutLocale !== '/' &&
@@ -48,7 +64,6 @@ export async function updateSession(request: NextRequest) {
   ) {
     // no user, potentially respond by redirecting the user to the login page
     // Preserve locale in redirect
-    const locale = pathname.match(/^\/([a-z]{2})(\/|$)/)?.[1] || 'tr'
     const url = request.nextUrl.clone()
     url.pathname = `/${locale}/login`
     return NextResponse.redirect(url)

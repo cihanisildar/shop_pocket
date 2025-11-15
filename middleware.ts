@@ -10,16 +10,20 @@ const intlMiddleware = createMiddleware({
 });
 
 export default async function middleware(request: NextRequest) {
-  // Handle Supabase auth callback redirect from /dashboard to /tr/auth/callback
   const pathname = request.nextUrl.pathname
   const code = request.nextUrl.searchParams.get('code')
   
-  // If we're at /dashboard with a code parameter, redirect to the callback route
-  if (pathname === '/dashboard' && code) {
-    const defaultLocale = 'tr'
+  // Handle Supabase auth callback - catch any path with code parameter
+  // This includes /dashboard, /en, /tr, etc.
+  if (code) {
+    // Extract locale from pathname (e.g., /en -> en, /tr -> tr, /dashboard -> default to tr)
+    const localeMatch = pathname.match(/^\/([a-z]{2})(\/|$)/)
+    const locale = localeMatch ? localeMatch[1] : 'tr'
+    
+    // Redirect to the proper callback route
     const url = request.nextUrl.clone()
-    url.pathname = `/${defaultLocale}/auth/callback`
-    // Preserve all query parameters
+    url.pathname = `/${locale}/auth/callback`
+    // Preserve all query parameters (code, next, etc.)
     return NextResponse.redirect(url)
   }
 
@@ -34,7 +38,7 @@ export default async function middleware(request: NextRequest) {
     return intlResponse;
   }
 
-  // Handle Supabase session (this may redirect, but we'll handle it in the Supabase middleware)
+  // Handle Supabase session - this checks authentication status
   const supabaseResponse = await updateSession(request);
 
   // If Supabase redirected, use that redirect (it already preserves locale)
