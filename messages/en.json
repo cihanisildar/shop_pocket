@@ -228,6 +228,9 @@
     "columnMappingsConfigured": "Column mappings configured",
     "editCatalogTitle": "Edit catalog",
     "deleteCatalogTitle": "Delete catalog",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "catalogDeletedSuccessfully": "Catalog deleted successfully",
     "created": "Created",
     "configureColumnMappings": "Configure column mappings"
   },

@@ -229,6 +229,9 @@
     "columnMappingsConfigured": "Sütun eşlemeleri yapılandırıldı",
     "editCatalogTitle": "Katalogu düzenle",
     "deleteCatalogTitle": "Katalogu sil",
+    "delete": "Sil",
+    "deleting": "Siliniyor...",
+    "catalogDeletedSuccessfully": "Katalog başarıyla silindi",
     "created": "Oluşturuldu",
     "configureColumnMappings": "Sütun eşlemelerini yapılandır"
   },

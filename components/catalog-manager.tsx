@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { Edit2, Trash2, Package, Settings, X, Check } from 'lucide-react'
-import { getCatalogs, updateCatalog, deleteCatalog } from '@/app/actions/catalogs'
+import { getCatalogs, updateCatalog } from '@/app/actions/catalogs'
 import CreateCatalogDialog from '@/components/create-catalog-dialog'
 import ColumnMappingDialog from '@/components/column-mapping-dialog'
+import DeleteCatalogDialog from '@/components/delete-catalog-dialog'
 import type { Catalog } from '@/lib/types'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
@@ -21,6 +22,8 @@ export default function CatalogManager() {
   })
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
+  const [catalogToDelete, setCatalogToDelete] = useState<{ id: string; name: string } | null>(null)
 
   useEffect(() => {
     loadCatalogs()
@@ -82,20 +85,16 @@ export default function CatalogManager() {
     setError(null)
   }
 
-  const handleDelete = async (catalogId: string) => {
-    if (!confirm(t('deleteConfirm'))) {
-      return
-    }
+  const handleDelete = (catalog: Catalog) => {
+    setCatalogToDelete({ id: catalog.id, name: catalog.name })
+    setDeleteDialogOpen(true)
+  }
 
-    setLoading(true)
-    const result = await deleteCatalog(catalogId)
-    setLoading(false)
-
-    if (!result.error) {
-      router.refresh()
-    } else {
-      setError(result.error)
-    }
+  const handleDeleteConfirmed = () => {
+    setDeleteDialogOpen(false)
+    setCatalogToDelete(null)
+    loadCatalogs()
+    router.refresh()
   }
 
   return (
@@ -278,7 +277,7 @@ export default function CatalogManager() {
                       <Edit2 className="w-4 h-4" />
                     </button>
                     <button
-                      onClick={() => handleDelete(catalog.id)}
+                      onClick={() => handleDelete(catalog)}
                       className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                       title={t('deleteCatalogTitle')}
                     >
@@ -292,6 +291,17 @@ export default function CatalogManager() {
           </div>
         )}
       </div>
+
+      {/* Delete Catalog Dialog */}
+      {catalogToDelete && (
+        <DeleteCatalogDialog
+          catalogId={catalogToDelete.id}
+          catalogName={catalogToDelete.name}
+          open={deleteDialogOpen}
+          onOpenChange={setDeleteDialogOpen}
+          onDeleted={handleDeleteConfirmed}
+        />
+      )}
     </div>
   )
 }
