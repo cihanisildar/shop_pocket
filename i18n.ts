@@ -6,7 +6,7 @@ export type Locale = (typeof locales)[number];
 
 export default getRequestConfig(async ({ locale }) => {
   // Ensure we have a valid locale
-  const validLocale = (locales.includes(locale as Locale) ? locale : 'en') as Locale;
+  const validLocale = (locales.includes(locale as Locale) ? locale : 'tr') as Locale;
 
   return {
     locale: validLocale,

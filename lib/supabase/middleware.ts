@@ -48,7 +48,7 @@ export async function updateSession(request: NextRequest) {
   ) {
     // no user, potentially respond by redirecting the user to the login page
     // Preserve locale in redirect
-    const locale = pathname.match(/^\/([a-z]{2})(\/|$)/)?.[1] || 'en'
+    const locale = pathname.match(/^\/([a-z]{2})(\/|$)/)?.[1] || 'tr'
     const url = request.nextUrl.clone()
     url.pathname = `/${locale}/login`
     return NextResponse.redirect(url)
