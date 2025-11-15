@@ -1,0 +1,34 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "next-intl/server",
+        "namedImports": [
+          "getRequestConfig"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "next/navigation",
+        "namedImports": [
+          "notFound"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "locales"
+      },
+      {
+        "type": "default"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\i18n.ts"
+  },
+  "timestamp": 1763218219120,
+  "hash": "b4caa506f83723152b14261b86cc47699f3ab5dbc22288eb938fd1568549d596"
+}

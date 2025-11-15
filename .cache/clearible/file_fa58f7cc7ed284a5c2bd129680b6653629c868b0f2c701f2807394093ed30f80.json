@@ -1,0 +1,29 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "@/i18n",
+        "namedImports": [
+          "locales",
+          "Locale"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "getLocalizedPath"
+      },
+      {
+        "type": "named",
+        "name": "getLocaleFromPath"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\lib\\i18n-utils.ts"
+  },
+  "timestamp": 1763218219141,
+  "hash": "bb1ab99f086abdbb07beece987b3bd2fb075da294daf55a6930ed361da1c6ba9"
+}

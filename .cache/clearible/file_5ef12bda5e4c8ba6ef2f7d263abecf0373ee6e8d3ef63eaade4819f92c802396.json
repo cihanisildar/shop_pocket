@@ -1,0 +1,42 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "next/cache",
+        "namedImports": [
+          "revalidatePath"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "next/navigation",
+        "namedImports": [
+          "redirect"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "@/lib/supabase/server",
+        "namedImports": [
+          "createClient"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "signInWithGoogle"
+      },
+      {
+        "type": "named",
+        "name": "signOut"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\app\\actions\\auth.ts"
+  },
+  "timestamp": 1763218218893,
+  "hash": "af9d3e4405076822b5317723db728e8bf26d12051636ce99bca5029698bf508c"
+}

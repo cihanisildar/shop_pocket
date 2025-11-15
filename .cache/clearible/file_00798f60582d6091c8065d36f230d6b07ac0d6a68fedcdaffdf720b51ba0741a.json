@@ -1,0 +1,31 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "@supabase/ssr",
+        "namedImports": [
+          "createServerClient"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "next/headers",
+        "namedImports": [
+          "cookies"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "createClient"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\lib\\supabase\\server.ts"
+  },
+  "timestamp": 1763218219151,
+  "hash": "9df5734d9d6510eac448770d80d4943c9ca34d744e983dbf703a1ee10a9f32b6"
+}

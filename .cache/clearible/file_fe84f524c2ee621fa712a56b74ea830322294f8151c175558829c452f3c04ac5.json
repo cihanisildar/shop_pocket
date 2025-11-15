@@ -1,0 +1,17 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "./.next/dev/types/routes.d.ts",
+        "namedImports": [],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\next-env.d.ts"
+  },
+  "timestamp": 1763218219158,
+  "hash": "72c48fd606571766be18f2ba00ef3bb8a57c4db404860af1ff375c9737be8949"
+}

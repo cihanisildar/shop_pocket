@@ -1,0 +1,24 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "@supabase/ssr",
+        "namedImports": [
+          "createBrowserClient"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "createClient"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\lib\\supabase\\client.ts"
+  },
+  "timestamp": 1763218219143,
+  "hash": "10dfedcc6a30ce8c3558c7cc3effdf54698279659b4d0700637e795d3ca8c1fc"
+}

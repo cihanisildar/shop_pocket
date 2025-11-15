@@ -1,0 +1,32 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "@supabase/ssr",
+        "namedImports": [
+          "createServerClient"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "next/server",
+        "namedImports": [
+          "NextResponse",
+          "NextRequest"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "updateSession"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\lib\\supabase\\middleware.ts"
+  },
+  "timestamp": 1763218219148,
+  "hash": "c940741645d34a88bdd6fe1e4947489ccbbf425da734e71cc95896be93b20f6f"
+}

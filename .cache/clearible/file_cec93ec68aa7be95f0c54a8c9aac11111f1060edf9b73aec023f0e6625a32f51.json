@@ -1,0 +1,48 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "next-intl/middleware",
+        "namedImports": [],
+        "isTypeImport": false,
+        "defaultImport": "createMiddleware"
+      },
+      {
+        "source": "next/server",
+        "namedImports": [
+          "NextRequest"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "@/lib/supabase/middleware",
+        "namedImports": [
+          "updateSession"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "./i18n",
+        "namedImports": [
+          "locales"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "proxy"
+      },
+      {
+        "type": "named",
+        "name": "config"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\proxy.ts"
+  },
+  "timestamp": 1763218219163,
+  "hash": "b8fed4bce184609e97fda5c9c62942ca77ad470a8a16b11299880f5c106c287e"
+}

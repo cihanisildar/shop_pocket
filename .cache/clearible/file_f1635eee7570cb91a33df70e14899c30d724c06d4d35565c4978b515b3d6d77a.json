@@ -1,0 +1,80 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "@/lib/supabase/server",
+        "namedImports": [
+          "createClient"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "next/cache",
+        "namedImports": [
+          "revalidatePath"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "@/lib/types",
+        "namedImports": [
+          "UserList",
+          "ListItem",
+          "ReferenceItem"
+        ],
+        "isTypeImport": true
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "createList"
+      },
+      {
+        "type": "named",
+        "name": "getLists"
+      },
+      {
+        "type": "named",
+        "name": "deleteList"
+      },
+      {
+        "type": "named",
+        "name": "addListItem"
+      },
+      {
+        "type": "named",
+        "name": "updateListItem"
+      },
+      {
+        "type": "named",
+        "name": "deleteListItem"
+      },
+      {
+        "type": "named",
+        "name": "uploadReferenceItems"
+      },
+      {
+        "type": "named",
+        "name": "getReferenceItems"
+      },
+      {
+        "type": "named",
+        "name": "addReferenceItem"
+      },
+      {
+        "type": "named",
+        "name": "updateReferenceItem"
+      },
+      {
+        "type": "named",
+        "name": "deleteReferenceItem"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\app\\actions\\lists.ts"
+  },
+  "timestamp": 1763218218978,
+  "hash": "275f34604125c834b0d84ceb1b54dead202c615501b605e15fa2e1bfc626f2dd"
+}

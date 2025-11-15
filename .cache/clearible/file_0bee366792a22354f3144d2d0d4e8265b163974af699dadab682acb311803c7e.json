@@ -1,0 +1,29 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "next",
+        "namedImports": [
+          "NextConfig"
+        ],
+        "isTypeImport": true
+      },
+      {
+        "source": "next-intl/plugin",
+        "namedImports": [],
+        "isTypeImport": false,
+        "defaultImport": "createNextIntlPlugin"
+      }
+    ],
+    "exports": [
+      {
+        "type": "default"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\next.config.ts"
+  },
+  "timestamp": 1763218219160,
+  "hash": "066418dc6e0c526160551d80b7ee51fe08d15decda492ee12e39bc432940e43e"
+}

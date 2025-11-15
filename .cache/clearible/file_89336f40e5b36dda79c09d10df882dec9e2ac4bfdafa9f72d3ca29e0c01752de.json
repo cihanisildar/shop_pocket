@@ -1,0 +1,50 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "@/lib/supabase/server",
+        "namedImports": [
+          "createClient"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "next/cache",
+        "namedImports": [
+          "revalidatePath"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "@/lib/types",
+        "namedImports": [
+          "Catalog"
+        ],
+        "isTypeImport": true
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "createCatalog"
+      },
+      {
+        "type": "named",
+        "name": "getCatalogs"
+      },
+      {
+        "type": "named",
+        "name": "updateCatalog"
+      },
+      {
+        "type": "named",
+        "name": "deleteCatalog"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\app\\actions\\catalogs.ts"
+  },
+  "timestamp": 1763218218904,
+  "hash": "8bf02fbdc918ef16a517bac6b868b9c99160bfab3ef04afef987b7ae10eb8198"
+}

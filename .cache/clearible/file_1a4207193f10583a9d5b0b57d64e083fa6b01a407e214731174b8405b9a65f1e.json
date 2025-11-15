@@ -1,0 +1,81 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "react",
+        "namedImports": [],
+        "isTypeImport": false,
+        "namespaceImport": "React"
+      },
+      {
+        "source": "@radix-ui/react-select",
+        "namedImports": [],
+        "isTypeImport": false,
+        "namespaceImport": "SelectPrimitive"
+      },
+      {
+        "source": "lucide-react",
+        "namedImports": [
+          "Check",
+          "ChevronDown",
+          "ChevronUp"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "@/lib/utils",
+        "namedImports": [
+          "cn"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "Select"
+      },
+      {
+        "type": "named",
+        "name": "SelectGroup"
+      },
+      {
+        "type": "named",
+        "name": "SelectValue"
+      },
+      {
+        "type": "named",
+        "name": "SelectTrigger"
+      },
+      {
+        "type": "named",
+        "name": "SelectContent"
+      },
+      {
+        "type": "named",
+        "name": "SelectLabel"
+      },
+      {
+        "type": "named",
+        "name": "SelectItem"
+      },
+      {
+        "type": "named",
+        "name": "SelectSeparator"
+      },
+      {
+        "type": "named",
+        "name": "SelectScrollUpButton"
+      },
+      {
+        "type": "named",
+        "name": "SelectScrollDownButton"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\components\\ui\\select.tsx"
+  },
+  "timestamp": 1763218219116,
+  "hash": "f2d8d92cde52034b9e990b73847f00e7c5a7daa4ce2b7813c4f7cd9bc350d6c2"
+}

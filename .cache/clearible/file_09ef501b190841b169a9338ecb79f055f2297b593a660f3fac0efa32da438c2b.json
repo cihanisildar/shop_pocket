@@ -1,0 +1,32 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "clsx",
+        "namedImports": [
+          "ClassValue",
+          "clsx"
+        ],
+        "isTypeImport": false
+      },
+      {
+        "source": "tailwind-merge",
+        "namedImports": [
+          "twMerge"
+        ],
+        "isTypeImport": false
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "cn"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\lib\\utils.ts"
+  },
+  "timestamp": 1763218219156,
+  "hash": "be450f82a35fe482490e593bdbb9dcd53a58000cb52079c1539b0658890885bd"
+}

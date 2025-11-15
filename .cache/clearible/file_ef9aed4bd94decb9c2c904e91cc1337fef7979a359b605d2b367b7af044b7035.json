@@ -1,0 +1,30 @@
+{
+  "data": {
+    "imports": [
+      {
+        "source": "xlsx",
+        "namedImports": [],
+        "isTypeImport": false,
+        "namespaceImport": "XLSX"
+      },
+      {
+        "source": "./types",
+        "namedImports": [
+          "ColumnMapping"
+        ],
+        "isTypeImport": true
+      }
+    ],
+    "exports": [
+      {
+        "type": "named",
+        "name": "parseExcelFile"
+      }
+    ],
+    "components": [],
+    "hooks": [],
+    "filePath": "C:\\Users\\offic\\OneDrive\\Desktop\\shop_pocket\\lib\\excel-parser.ts"
+  },
+  "timestamp": 1763218219138,
+  "hash": "6573a46b82f2e9c9a2ec7c21c562a5808ad6a1bb082604e232d3757205cf9561"
+}
