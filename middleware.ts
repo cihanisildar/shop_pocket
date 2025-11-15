@@ -14,8 +14,8 @@ export default async function middleware(request: NextRequest) {
   const code = request.nextUrl.searchParams.get('code')
   
   // Handle Supabase auth callback - catch any path with code parameter
-  // This includes /dashboard, /en, /tr, etc.
-  if (code) {
+  // BUT exclude the callback route itself to avoid redirect loops
+  if (code && !pathname.includes('/auth/callback')) {
     // Extract locale from pathname (e.g., /en -> en, /tr -> tr, /dashboard -> default to tr)
     const localeMatch = pathname.match(/^\/([a-z]{2})(\/|$)/)
     const locale = localeMatch ? localeMatch[1] : 'tr'

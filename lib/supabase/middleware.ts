@@ -40,6 +40,11 @@ export async function updateSession(request: NextRequest) {
   const pathnameWithoutLocale = pathname.replace(/^\/[a-z]{2}(\/|$)/, '/')
   const locale = pathname.match(/^\/([a-z]{2})(\/|$)/)?.[1] || 'tr'
 
+  // IMPORTANT: Never redirect the callback route - it needs to process the code
+  if (pathnameWithoutLocale.startsWith('/auth/callback')) {
+    return supabaseResponse
+  }
+
   // If user is authenticated, redirect them away from homepage/login/signup to dashboard
   if (user) {
     if (

@@ -21,9 +21,16 @@ export async function GET(request: Request) {
 
   if (code) {
     const supabase = await createClient()
-    await supabase.auth.exchangeCodeForSession(code)
+    const { error } = await supabase.auth.exchangeCodeForSession(code)
+    
+    // If there's an error exchanging the code, redirect to login
+    if (error) {
+      redirect(`/${locale}/login?error=auth_failed`)
+      return
+    }
   }
 
+  // Use absolute URL for redirect to avoid any relative path issues
   redirect(nextWithLocale)
 }
 
